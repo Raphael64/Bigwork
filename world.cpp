@@ -26,6 +26,11 @@ void World::initWorld(string mapFile){
     p2->setPosX(6);
     p2->setPosY(5);
 
+    RPGObj *p4 = new RPGObj;
+    p4->initObj("stone");
+    p4->setPosX(14);
+    p4->setPosY(15);
+
     RPGObj *p3 = new Fruit;
     p3->initObj("fruit");
     p3->setPosX(6);
@@ -34,6 +39,7 @@ void World::initWorld(string mapFile){
     this->_objs.push_back(p1);
     this->_objs.push_back(p2);
     this->_objs.push_back(p3);
+    this->_objs.push_back(p4);
 
     QMediaPlayer * player = new QMediaPlayer;
     player->setMedia(QUrl("qrc:/sounds/hdl.mp3"));
